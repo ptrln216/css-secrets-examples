@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parallelograms</title>
+    <style>
+      html,
+      body {
+        font-size: 62.5%;
+        background: #eee;
+      }
+      .container {
+        font-size: 1rem;
+        height: 100%;
+        min-height: 0;
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+      }
+      .base {
+        width: 100px;
+        height: 30px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .paralle {
+        background: #fb3;
+        transform: skew(-45deg);
+      }
+      .paralle-pseudo {
+        position: relative;
+        background: transparent;
+        z-index: 0; /* This is necessary */
+      }
+      .paralle-pseudo::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #fb3;
+        z-index: -1;
+        transform: skew(-45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="./index.html">Home</a>
+    </div>
+    <div class="container">
+      <div class="base paralle">CLICK ME</div>
+      <div class="base paralle-pseudo">CLICK ME</div>
+    </div>
+  </body>
+</html>

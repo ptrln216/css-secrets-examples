@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pie Static</title>
+    <style>
+      :root {
+        --size: 200px;
+      }
+      html,
+      body {
+        font-size: 62.5%;
+        background: #eee;
+      }
+      .container {
+        height: 100%;
+        min-height: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px 24px;
+        font-size: 2.4rem;
+      }
+      .pie {
+        position: relative;
+        line-height: var(--size);
+        width: var(--size);
+        text-align: center;
+        color: transparent;
+        border-radius: 50%;
+        background: yellowgreen;
+        background-image: linear-gradient(to right, yellowgreen 50%, #655 0);
+      }
+      .pie::after {
+        content: "";
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 50%;
+        right: 0;
+        bottom: 0;
+        background-color: inherit;
+        border-radius: 0 100% 100% 0 / 50%;
+        transform-origin: left;
+        animation: spin 50s linear infinite, bg 100s step-end infinite;
+        animation-play-state: paused;
+        animation-delay: inherit;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(0.5turn);
+        }
+      }
+      @keyframes bg {
+        50% {
+          background: #655;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="./index.html">Home</a>
+    </div>
+    <div class="container">
+      <div class="pie">20%</div>
+      <div class="pie">60%</div>
+    </div>
+  </body>
+  <script>
+    const pieElements = document.querySelectorAll(".pie");
+    pieElements.forEach((pie) => {
+      const rate = parseFloat(pie.textContent);
+      pie.style.animationDelay = `-${rate}s`;
+    });
+  </script>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fluid Fixed</title>
+    <style>
+      html,
+      body {
+        font-size: 62.5%;
+        background: #eee;
+      }
+      .container {
+        height: 100%;
+        min-height: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px 24px;
+        font-size: 2.4rem;
+      }
+      figure {
+        max-width: 300px;
+        max-width: min-content;
+        margin: auto;
+        border: 1px solid black;
+        padding: 24px;
+      }
+      figure > img {
+        max-width: inherit;
+      }
+      footer {
+        padding: 1em;
+        padding: 1em calc(50% - 450px);
+        color: white;
+        background: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="./index.html">Home</a>
+    </div>
+    <div class="container">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore vel
+        nemo nisi dignissimos, doloremque voluptate iste necessitatibus autem,
+        tempore consequuntur totam, neque dolorem illum voluptatem quibusdam
+        perferendis voluptatum corrupti labore.
+      </p>
+      <figure>
+        <img width="400" src="./assets/avatar.jpg" alt="" />
+        <figcaption>
+          The great Sir Adam Catlace was named after Countess Ada Lovelace, the
+          first programmer.
+        </figcaption>
+      </figure>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+        cumque fugit doloremque inventore, qui odit earum nisi vel sed expedita
+        quas sit animi dicta. Sint temporibus harum possimus porro at!
+      </p>
+      <footer>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quo id
+        voluptatibus obcaecati dolorem magni totam deserunt vel doloremque
+        excepturi, velit vitae voluptate reiciendis assumenda nam sit sed,
+        ratione amet.
+      </footer>
+    </div>
+  </body>
+</html>

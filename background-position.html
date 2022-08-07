@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Position</title>
+    <style>
+      html,
+      body {
+        font-size: 62.5%;
+        background: #eee;
+      }
+      .box {
+        height: 400px;
+        width: 800px;
+        background: #58e url(./assets/bg.png) no-repeat;
+        background-size: contain;
+        background-position: right bottom;
+        background-origin: content-box;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="./index.html">Home</a>
+    </div>
+    <div class="box">Css Secrets</div>
+  </body>
+</html>

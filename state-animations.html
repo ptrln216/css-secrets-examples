@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>State Animations</title>
+    <style>
+      html,
+      body {
+        background: #eee;
+      }
+      @keyframes panoramic {
+        to {
+          background-position: 100% 0;
+        }
+      }
+      .panoramic {
+        width: 300px;
+        height: 300px;
+        background: url("./assets/naxos-island.jpg");
+        background-size: auto 100%;
+        overflow: hidden;
+        animation: panoramic 10s linear infinite alternate;
+        animation-play-state: paused;
+      }
+      .panoramic:hover,
+      .panoramic:focus {
+        animation-play-state: running;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="./index.html">Home</a>
+    <div class="panoramic"></div>
+  </body>
+</html>

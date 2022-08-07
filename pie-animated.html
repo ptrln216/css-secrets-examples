@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pie Animated</title>
+    <style>
+      :root {
+        --size: 200px;
+      }
+      html,
+      body {
+        font-size: 62.5%;
+        background: #eee;
+      }
+      .container {
+        height: 100%;
+        min-height: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px 24px;
+        font-size: 2.4rem;
+      }
+      .base {
+        width: var(--size);
+        height: var(--size);
+        border-radius: 50%;
+        background: yellowgreen;
+        background-image: linear-gradient(to right, transparent 50%, #655 0);
+      }
+      .pie::after {
+        content: "";
+        display: block;
+        margin-left: 50%;
+        height: 100%;
+        background-color: inherit;
+        border-radius: 0 100% 100% 0 / 50%;
+        transform: rotate(0.2turn);
+        transform-origin: left;
+      }
+      .pie-pseudo-illustrate::after {
+        content: "";
+        border: 1px dashed #333e59;
+        margin-left: 50%;
+        display: block;
+        height: 100%;
+      }
+      .pie-over-50::after {
+        content: "";
+        display: block;
+        margin-left: 50%;
+        height: 100%;
+        background-color: #655;
+        border-radius: 0 100% 100% 0 / 50%;
+        transform: rotate(0.1turn);
+        transform-origin: left;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(0.5turn);
+        }
+      }
+
+      @keyframes bg {
+        50% {
+          background: #655;
+        }
+      }
+
+      .pie-animate::after {
+        content: "";
+        display: block;
+        margin-left: 50%;
+        background-color: inherit;
+        height: 100%;
+        border-radius: 0 100% 100% 0 / 50%;
+        transform-origin: left;
+        animation: spin 3s linear infinite, bg 6s step-end infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="./index.html">Home</a>
+    </div>
+    <div class="container">
+      <div class="base pie pie-pseudo-illustrate"></div>
+      <div class="base pie-over-50 pie-pseudo-illustrate"></div>
+      <div class="base pie-animate"></div>
+    </div>
+  </body>
+</html>

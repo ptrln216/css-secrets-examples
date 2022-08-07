@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Folded Corner</title>
+    <style>
+      :root {
+        --size: 400px;
+        --bg: #58a;
+      }
+      html,
+      body {
+        font-size: 62.5%;
+        background: #eee;
+      }
+      .container {
+        width: var(--size);
+        height: fit-content;
+        padding: 2em 1em;
+        font-size: 1.4rem;
+        color: white;
+        line-height: 1.5;
+      }
+      .fold {
+        background: var(--bg);
+        background: linear-gradient(
+              to bottom left,
+              transparent 50%,
+              rgba(0, 0, 0, 0.4) 0
+            )
+            no-repeat 100% 0 / 2em 2em,
+          linear-gradient(-135deg, transparent 1.5em, var(--bg) 0);
+      }
+      .realistic {
+        position: relative;
+        margin-top: 1em;
+        border-radius: 0.5em;
+        background: var(--bg); /* fallback */
+        background: linear-gradient(-150deg, transparent 1.5em, var(--bg) 0);
+      }
+      .realistic::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: linear-gradient(
+            to left bottom,
+            transparent 50%,
+            rgba(0, 0, 0, 0.2) 0,
+            rgba(0, 0, 0, 0.4)
+          )
+          no-repeat;
+        transform-origin: bottom right;
+        transform: translateY(-1.3em) rotate(-30deg);
+        width: 1.73em;
+        height: 3em;
+        border-bottom-left-radius: inherit;
+        box-shadow: -0.2em 0.2em 0.3em -0.1em rgba(0, 0, 0, 0.15);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="./index.html">Home</a>
+    </div>
+    <div class="container fold">
+      <main>
+        <blockquote>
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+          veniam ex nulla dolores natus cum? Nihil iure officiis iste ipsam quis
+          sunt quos veniam, unde a esse necessitatibus minima magni!"
+          <footer>
+            -
+            <cite> Peter Lin, The Picture of John Doe </cite>
+          </footer>
+        </blockquote>
+      </main>
+    </div>
+    <div class="container realistic">
+      <main>
+        <blockquote>
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+          veniam ex nulla dolores natus cum? Nihil iure officiis iste ipsam quis
+          sunt quos veniam, unde a esse necessitatibus minima magni!"
+          <footer>
+            -
+            <cite> Peter Lin, The Picture of John Doe </cite>
+          </footer>
+        </blockquote>
+      </main>
+    </div>
+  </body>
+</html>

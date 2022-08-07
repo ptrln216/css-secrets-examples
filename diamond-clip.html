@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diamond Clip</title>
+    <style>
+      html,
+      body {
+        font-size: 62.5%;
+        background: #eee;
+      }
+      .container {
+        font-size: 1rem;
+        height: 100%;
+        min-height: 0;
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+      }
+      .picture {
+        width: 400px;
+        transform: rotate(45deg);
+        overflow: hidden;
+      }
+      .picture > img {
+        max-width: 100%;
+        transform: rotate(-45deg) scale(1.42);
+      }
+      .path {
+        width: 400px;
+        cursor: pointer;
+        transition: clip-path 300ms ease-in-out;
+        clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+      }
+      .path:hover {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="./index.html">Home</a>
+    </div>
+    <div class="container">
+      <div class="picture">
+        <img src="./assets/avatar.jpg" alt="avatar picture" />
+      </div>
+      <img class="path" src="./assets//avatar.jpg" alt="avatar picture" />
+    </div>
+  </body>
+</html>

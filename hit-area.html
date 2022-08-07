@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hit Area</title>
+    <style>
+      :root {
+        --size: 400px;
+      }
+      html,
+      body {
+        font-size: 62.5%;
+        background: #eee;
+      }
+      body {
+        font-size: 1rem;
+      }
+      .button {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        background: #58a;
+        border-radius: 50%;
+        cursor: pointer;
+        margin: 2em;
+      }
+      .button::after {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+      }
+      .button:hover {
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3) inset,
+          0 0.1em 0.2em -0.05em rgba(0, 0, 0, 0.5);
+      }
+      .bar {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 10px;
+        height: 2px;
+        background: white;
+      }
+      .vertical {
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="./index.html">Home</a>
+    </div>
+    <div class="button">
+      <div class="bar horizontal"></div>
+      <div class="bar vertical"></div>
+    </div>
+  </body>
+</html>

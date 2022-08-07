@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Letterpress</title>
+    <style>
+      :root {
+        --size: 400px;
+      }
+      html,
+      body {
+        font-size: 62.5%;
+        background: #eee;
+      }
+      body {
+        font-size: 1rem;
+      }
+      .base {
+        width: var(--size);
+        height: 200px;
+        font-size: 2em;
+        padding: 0.5em 1em;
+      }
+      .box1 {
+        background: hsl(210, 13%, 60%);
+        color: hsl(210, 13%, 30%);
+        text-shadow: 0 1px 1px hsla(0, 0%, 100%, 0.8);
+      }
+      .box2 {
+        background: hsl(210, 13%, 40%);
+        color: hsl(210, 13%, 75%);
+        text-shadow: 0 -1px 1px black;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="./index.html">Home</a>
+    </div>
+    <div class="base box1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+      obcaecati tenetur quia aliquid autem dolores sequi molestias! Possimus
+      harum, dolorem inventore error natus aut soluta, similique magni ut, culpa
+      libero!
+    </div>
+    <div class="base box2">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+      obcaecati tenetur quia aliquid autem dolores sequi molestias! Possimus
+      harum, dolorem inventore error natus aut soluta, similique magni ut, culpa
+      libero!
+    </div>
+  </body>
+</html>

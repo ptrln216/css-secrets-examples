@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elastic</title>
+    <style>
+      html,
+      body {
+        background: #eee;
+      }
+      div {
+        margin-bottom: 20px;
+      }
+      input {
+        display: block;
+        position: relative;
+      }
+      input:not(:focus) + .callout,
+      input:not(:focus) + .callout-transition {
+        transform: scale(0);
+      }
+      input:not(:focus) + .callout-transition {
+        transition: 0.25s;
+      }
+      input:focus + .callout {
+        animation: elastic-grow 0.5s;
+      }
+      @keyframes elastic-grow {
+        from {
+          transform: scale(0);
+        }
+        70% {
+          transform: scale(1.1);
+          animation-timing-function: cubic-bezier(0.1, 0.25, 0.1, 0.25);
+        }
+      }
+      .callout,
+      .callout-transition {
+        transition: transform 0.5s;
+        transform-origin: 1.4em -0.4em;
+        position: absolute;
+        background: seashell;
+        padding: 0.5em 1em;
+        border: 1px solid #333;
+        border-radius: 0.15em;
+        box-shadow: 0 4px 10px hsla(0, 0%, 0%, 0.1);
+      }
+      .callout-transition {
+        transition: 0.5s cubic-bezier(0.25, 0.1, 0.3, 1.5);
+      }
+      .callout::before,
+      .callout-transition::before {
+        content: "";
+        position: absolute;
+        top: -0.3em;
+        left: 1em;
+        width: 8px;
+        height: 8px;
+        background: inherit;
+        border: inherit;
+        border-radius: inherit;
+        border-left: none;
+        border-bottom: none;
+        transform: rotate(-45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <a href="./index.html">Home</a>
+    <div>
+      <label>
+        Your username: <input id="username" />
+        <span class="callout">
+          Only letters, numbers, underscores (_) and hyphnes (-) allowed!
+        </span>
+      </label>
+    </div>
+    <div>
+      <label>
+        Your username: <input id="username" />
+        <span class="callout-transition">
+          Only letters, numbers, underscores (_) and hyphnes (-) allowed!
+        </span>
+      </label>
+    </div>
+  </body>
+</html>

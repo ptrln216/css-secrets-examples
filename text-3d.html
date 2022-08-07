@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text 3D</title>
+    <style>
+      :root {
+        --size: 400px;
+      }
+      html,
+      body {
+        font-size: 62.5%;
+        background: #eee;
+      }
+      body {
+        font-size: 1rem;
+      }
+      .base {
+        width: var(--size);
+        height: 200px;
+        font-size: 9em;
+        padding: 0.5em 1em;
+      }
+      .box1 {
+        background: #58a;
+        color: white;
+        margin-bottom: 0.2em;
+        text-shadow: 0 1px hsl(0, 0%, 85%), 0 2px hsl(0, 0%, 80%),
+          0 3px hsl(0, 0%, 75%), 0 4px hsl(0, 0%, 70%), 0 5px hsl(0, 0%, 65%),
+          0 5px 10px black;
+      }
+      .box2 {
+        text-transform: uppercase;
+        background: hsl(0, 50%, 45%);
+        color: white;
+        text-shadow: 1px 1px black, 2px 2px black, 3px 3px black, 4px 4px black,
+          5px 5px black, 6px 6px black, 7px 7px black, 8px 8px black;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="./index.html">Home</a>
+    </div>
+    <div class="base box1">CSS3d</div>
+    <div class="base box2">retro</div>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Tint</title>
+    <style>
+      :root {
+        --size: 300px;
+        --bg: #fb3;
+      }
+      html,
+      body {
+        font-size: 62.5%;
+        background: #eee;
+      }
+      .container {
+        height: 100%;
+        min-height: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px 24px;
+        font-size: 2.4rem;
+      }
+      img {
+        width: var(--size);
+        height: var(--size);
+        filter: sepia() saturate(4) hue-rotate(295deg);
+        transition: 0.5s filter;
+      }
+      img:hover,
+      img:focus {
+        filter: none;
+      }
+      a.link {
+        background: hsl(335, 100%, 50%);
+      }
+      a > img {
+        mix-blend-mode: luminosity;
+      }
+      .tinted-image {
+        width: var(--size);
+        height: var(--size);
+        background-image: url(./assets/avatar.jpg);
+        background-size: cover;
+        background-color: hsl(335, 100%, 50%);
+        background-blend-mode: luminosity;
+        transition: 0.5s background-color;
+      }
+      .tinted-image:hover {
+        background-color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="./index.html">Home</a>
+    </div>
+    <div class="container">
+      <img src="./assets/avatar.jpg" alt="" />
+      <a class="link" href="#something">
+        <img src="./assets/avatar.jpg" alt="" />
+      </a>
+      <div
+        class="tinted-image"
+        style="background-image: url(./assets/avatar.jpg)"
+      ></div>
+    </div>
+  </body>
+</html>

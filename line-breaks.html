@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Line Breaks</title>
+    <style>
+      :root {
+        --size: 400px;
+        --bg: #58a;
+      }
+      html,
+      body {
+        font-size: 62.5%;
+        background: #eee;
+      }
+      dl {
+        font-size: 1.8rem;
+        border: 1px solid #333e59;
+        padding: 2em 1em;
+      }
+      dd,
+      dt {
+        display: inline;
+      }
+      dt::after {
+        content: ": ";
+      }
+      dd {
+        margin: 0;
+        font-weight: bold;
+      }
+      dd + dt::before {
+        content: "\A";
+        white-space: pre;
+      }
+      dd + dd::before {
+        content: ", ";
+        margin-left: -0.25em;
+        font-weight: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="./index.html">Home</a>
+    </div>
+    <dl>
+      <dt>Name</dt>
+      <dd>Peter Lin</dd>
+
+      <dt>Email</dt>
+      <dd>pertererlin@gmail.com</dd>
+      <dd>1283014744@qq.com</dd>
+
+      <dt>Location</dt>
+      <dd>Earth</dd>
+    </dl>
+  </body>
+</html>

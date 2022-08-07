@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glow</title>
+    <style>
+      :root {
+        --size: 400px;
+      }
+      html,
+      body {
+        font-size: 62.5%;
+        background: #eee;
+      }
+      body {
+        font-size: 1rem;
+      }
+      .base {
+        width: var(--size);
+        height: 200px;
+        font-size: 9em;
+        padding: 0.5em 1em;
+        background: #203;
+        color: #ffc;
+        text-transform: capitalize;
+        transition: 1s;
+        margin-bottom: 0.2em;
+        cursor: pointer;
+      }
+      .box1:hover {
+        text-shadow: 0 0 0.1em, 0 0 0.3em;
+      }
+      .box2:hover {
+        color: transparent;
+        text-shadow: 0 0 0.1em white, 0 0 0.3em white;
+      }
+      .box3:hover {
+        filter: blur(0.1em);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="./index.html">Home</a>
+    </div>
+    <div class="base box1">glow</div>
+    <div class="base box2">glow</div>
+    <div class="base box3">glow</div>
+  </body>
+</html>

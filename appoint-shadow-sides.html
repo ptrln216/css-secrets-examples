@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appoint Shadow Sides</title>
+    <style>
+      :root {
+        --size: 200px;
+      }
+      html,
+      body {
+        font-size: 62.5%;
+        background: #eee;
+      }
+      .container {
+        height: 100%;
+        min-height: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px 24px;
+        font-size: 2.4rem;
+      }
+      .base {
+        width: var(--size);
+        height: 150px;
+        background: #fb3;
+      }
+      .shadow-on-bottom {
+        box-shadow: 0px 5px 4px -4px rgba(0, 0, 0, 0.5);
+      }
+      .shadow-adjacent {
+        box-shadow: 3px 3px 6px -3px rgba(0, 0, 0, 0.5);
+      }
+      .shadow-opposite {
+        box-shadow: 5px 0 5px -5px rgba(0, 0, 0, 0.5),
+          -5px 0 5px -5px rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="./index.html">Home</a>
+    </div>
+    <div class="container">
+      <div class="base shadow-on-bottom"></div>
+      <div class="base shadow-adjacent"></div>
+      <div class="base shadow-opposite"></div>
+    </div>
+  </body>
+</html>

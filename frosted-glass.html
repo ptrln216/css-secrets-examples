@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frosted Glass</title>
+    <style>
+      :root {
+        --size: 300px;
+        --bg: #fb3;
+      }
+      html,
+      body {
+        font-size: 62.5%;
+        background: #eee;
+      }
+      .container {
+        width: 600px;
+        height: 400px;
+        background: url(./assets/border-image.png) 0 / contain no-repeat;
+        padding: 4em 8em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+      }
+      blockquote {
+        font-size: 1.8em;
+        line-height: 1.5;
+        font-style: italic;
+      }
+      main {
+        position: relative;
+        width: 500px;
+        background: hsla(0, 0%, 100%, 0.3);
+        border-radius: 1.2em;
+        padding: 2em 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      }
+      .low-opacity {
+        background: hsla(0, 0%, 100%, 0.6);
+      }
+      .blur {
+        filter: blur(4px);
+      }
+      .abs {
+        z-index: 0;
+        overflow: hidden;
+      }
+      .abs::after {
+        filter: blur(2px);
+        z-index: -1;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: -30px;
+        background: url(./assets/border-image.png) 0 / contain no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="./index.html">Home</a>
+    </div>
+    <div class="container">
+      <main>
+        <blockquote>
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+          veniam ex nulla dolores natus cum? Nihil iure officiis iste ipsam quis
+          sunt quos veniam, unde a esse necessitatibus minima magni!"
+          <footer>
+            -
+            <cite> Peter Lin, The Picture of John Doe </cite>
+          </footer>
+        </blockquote>
+      </main>
+    </div>
+    <div class="container">
+      <main class="low-opacity">
+        <blockquote>
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+          veniam ex nulla dolores natus cum? Nihil iure officiis iste ipsam quis
+          sunt quos veniam, unde a esse necessitatibus minima magni!"
+          <footer>
+            -
+            <cite> Peter Lin, The Picture of John Doe </cite>
+          </footer>
+        </blockquote>
+      </main>
+    </div>
+    <div class="container">
+      <main class="blur">
+        <blockquote>
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+          veniam ex nulla dolores natus cum? Nihil iure officiis iste ipsam quis
+          sunt quos veniam, unde a esse necessitatibus minima magni!"
+          <footer>
+            -
+            <cite> Peter Lin, The Picture of John Doe </cite>
+          </footer>
+        </blockquote>
+      </main>
+    </div>
+    <div class="container">
+      <main class="abs">
+        <blockquote>
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+          veniam ex nulla dolores natus cum? Nihil iure officiis iste ipsam quis
+          sunt quos veniam, unde a esse necessitatibus minima magni!"
+          <footer>
+            -
+            <cite> Peter Lin, The Picture of John Doe </cite>
+          </footer>
+        </blockquote>
+      </main>
+    </div>
+  </body>
+</html>

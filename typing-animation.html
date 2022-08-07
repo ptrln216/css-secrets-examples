@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Animation</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+      html,
+      body {
+        background: #eee;
+      }
+      h1 {
+        font-family: "Source Code Pro", monospace;
+        color: tomato;
+        animation: typing 2.5s steps(15), caret 1s steps(1) infinite;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 0.05em solid transparent;
+      }
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+      }
+      @keyframes caret {
+        50% {
+          border-color: currentColor;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="./index.html">Home</a>
+    <h1>CSS is awesome!</h1>
+  </body>
+  <script>
+    const h1 = document.querySelector("h1");
+    const width = h1.textContent.length;
+    const s = h1.style;
+    s.width = width + "ch";
+    s.animationTimingFunction = `steps(${width}), steps(1)`;
+  </script>
+</html>

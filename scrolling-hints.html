@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scrolling Hints</title>
+    <style>
+      html,
+      body {
+        font-size: 62.5%;
+      }
+      .container {
+        height: 100%;
+        min-height: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px 24px;
+        font-size: 2.4rem;
+      }
+      ul {
+        overflow: auto;
+        width: 10em;
+        height: 8em;
+        padding: 0.3em 0.5em;
+        border: 1px solid silver;
+        background: linear-gradient(white 30%, hsla(0, 0%, 100%, 0)) top / 100%
+            50px,
+          radial-gradient(at top, rgba(0, 0, 0, 0.2), transparent 70%) top /
+            100% 15px,
+          linear-gradient(to top, white 30%, hsla(0, 0%, 100%, 0)) bottom / 100%
+            50px,
+          radial-gradient(at bottom, rgba(0, 0, 0, 0.2), transparent 70%) bottom /
+            100% 15px;
+        background-repeat: no-repeat;
+        background-attachment: local, scroll, local, scroll;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="./index.html">Home</a>
+    </div>
+    <div class="container">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+      </ul>
+    </div>
+  </body>
+</html>

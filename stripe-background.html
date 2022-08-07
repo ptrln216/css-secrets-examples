@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stripe Background</title>
+    <style>
+      html,
+      body {
+        font-size: 62.5%;
+        background: #eee;
+      }
+      .container {
+        height: 100%;
+        min-height: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px 24px;
+      }
+      .box {
+        height: 200px;
+        width: 400px;
+        background: linear-gradient(#fb3, #58e);
+      }
+      .box1 {
+        height: 200px;
+        width: 400px;
+        background: linear-gradient(#fb3 20%, #58e 80%);
+      }
+      .box2 {
+        height: 200px;
+        width: 400px;
+        background: linear-gradient(#fb3 40%, #58e 60%);
+      }
+      .box3 {
+        height: 200px;
+        width: 400px;
+        background: linear-gradient(#fb3 50%, #58e 50%);
+      }
+      .box4 {
+        height: 200px;
+        width: 400px;
+        background: linear-gradient(#fb3 30%, #58e 0);
+      }
+      .box5 {
+        height: 200px;
+        width: 400px;
+        background: linear-gradient(
+          #fb3 33.3%,
+          #58a 0,
+          #58a 66.6%,
+          yellowgreen 0
+        );
+        background-size: 100% 40px;
+      }
+      .box6 {
+        height: 200px;
+        width: 400px;
+        background: linear-gradient(to right, #fb3 50%, #58a 0);
+        background-size: 40px 100%;
+      }
+      .box7 {
+        height: 200px;
+        width: 400px;
+        background: linear-gradient(45deg, #fb3 50%, #58a 0);
+        background-size: 40px 40px;
+      }
+      .box8 {
+        height: 200px;
+        width: 400px;
+        background: linear-gradient(
+          45deg,
+          #fb3 25%,
+          #58a 0,
+          #58a 50%,
+          #fb3 0,
+          #fb3 75%,
+          #58a 0
+        );
+        background-size: 40px 40px;
+      }
+      .box8-equal-width {
+        background-size: 56px 56px;
+      }
+      .box9 {
+        height: 200px;
+        width: 400px;
+        background: linear-gradient(
+          60deg,
+          #fb3 25%,
+          #58a 0,
+          #58a 50%,
+          #fb3 0,
+          #fb3 75%,
+          #58a 0
+        );
+        background-size: 40px 40px;
+      }
+      .box10 {
+        height: 200px;
+        width: 400px;
+        background: repeating-linear-gradient(45deg, #fb3, #58a 40px);
+      }
+      .box11 {
+        height: 200px;
+        width: 400px;
+        background: repeating-linear-gradient(
+          45deg,
+          #fb3,
+          #fb3 20px,
+          #58a 0,
+          #58a 40px
+        );
+      }
+      .box12 {
+        height: 200px;
+        width: 400px;
+        background: repeating-linear-gradient(
+          60deg,
+          #fb3,
+          #fb3 20px,
+          #58a 0,
+          #58a 40px
+        );
+      }
+      .box12 {
+        height: 200px;
+        width: 400px;
+        background: #58a;
+        background-image: repeating-linear-gradient(
+          30deg,
+          transparent 0,
+          transparent 15px,
+          hsla(0, 0%, 100%, 0.1) 0,
+          hsla(0, 0%, 100%, 0.1) 30px
+        );
+      }
+      .box-size {
+        background-size: 100% 30px;
+      }
+      .border {
+        border: 1px solid blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="./index.html">Home</a>
+    </div>
+    <div class="container">
+      <div class="box"></div>
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box3"></div>
+      <div class="box3 border box-size"></div>
+      <div class="box4 border box-size"></div>
+      <div class="box5 border"></div>
+      <div class="box6"></div>
+      <div class="box7"></div>
+      <div class="box8"></div>
+      <div class="box8 box8-equal-width"></div>
+      <div class="box9"></div>
+      <div class="box10"></div>
+      <div class="box11"></div>
+      <div class="box12"></div>
+      <div class="box13"></div>
+    </div>
+  </body>
+</html>

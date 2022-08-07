@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complex Background</title>
+    <style>
+      html,
+      body {
+        font-size: 62.5%;
+        background: #ddd;
+      }
+      .container {
+        height: 100%;
+        min-height: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px 24px;
+      }
+      .size {
+        height: 200px;
+        width: 400px;
+      }
+      .box {
+        background: white;
+        background-image: linear-gradient(
+            90deg,
+            rgba(200, 0, 0, 0.5) 50%,
+            transparent 0
+          ),
+          linear-gradient(rgba(200, 0, 0, 0.5) 50%, transparent 0);
+        background-size: 40px 40px;
+      }
+      .box1 {
+        background: #58a;
+        background-image: linear-gradient(90deg, white 1px, transparent 0),
+          linear-gradient(white 1px, transparent 0);
+        background-size: 40px 40px;
+      }
+      .box2 {
+        background: #58a;
+        background-image: linear-gradient(white 2px, transparent 0),
+          linear-gradient(90deg, white 2px, transparent 0),
+          linear-gradient(hsla(0, 0%, 100%, 0.3) 1px, transparent 0),
+          linear-gradient(90deg, hsla(0, 0%, 100%, 0.3) 1px, transparent 0);
+        background-size: 100% 80px, 80px 100%, 100% 20px, 20px 100%;
+      }
+      .box3 {
+        background: #655;
+        background-image: radial-gradient(tan 30%, transparent 0);
+        background-size: 40px 40px;
+      }
+      .box4 {
+        background: #655;
+        background-image: radial-gradient(tan 30%, transparent 0),
+          radial-gradient(tan 30%, transparent 0);
+        background-size: 40px 40px;
+        background-position: 0 0, 20px 20px;
+      }
+      .box5 {
+        background: #eee;
+        background-image: linear-gradient(45deg, #bbb 25%, transparent 0);
+        background-size: 40px 40px;
+      }
+      .box6 {
+        background: #eee;
+        background-image: linear-gradient(45deg, transparent 75%, #bbb 0);
+        background-size: 40px 40px;
+      }
+      .box7 {
+        background: #eee;
+        background-image: linear-gradient(
+            45deg,
+            rgba(0, 0, 0, 0.25) 25%,
+            transparent 0
+          ),
+          linear-gradient(45deg, rgba(0, 0, 0, 0.25) 25%, transparent 0),
+          linear-gradient(45deg, transparent 75%, rgba(0, 0, 0, 0.25) 0),
+          linear-gradient(45deg, transparent 75%, rgba(0, 0, 0, 0.25) 0);
+        background-size: 40px 40px;
+      }
+      .box8 {
+        background-position: 0 0, 20px 20px, 0 0, -20px -20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="./index.html">Home</a>
+    </div>
+    <div class="container">
+      <div class="size box"></div>
+      <div class="size box1"></div>
+      <div class="size box2"></div>
+      <div class="size box3"></div>
+      <div class="size box4"></div>
+      <div class="size box5"></div>
+      <div class="size box6"></div>
+      <div class="size box7"></div>
+      <div class="size box7 box8"></div>
+      <div class="size conic"></div>
+    </div>
+  </body>
+</html>

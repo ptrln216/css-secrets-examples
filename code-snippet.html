@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Snippet</title>
+    <style>
+      :root {
+        --size: 400px;
+        --bg: #58a;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        font-size: 1.6rem;
+      }
+      code,
+      pre {
+        font-family: monospace;
+      }
+      pre {
+        width: fit-content;
+        background: beige;
+        display: block;
+        margin: 1em 0;
+        white-space: pre;
+        padding: 0.5em;
+        line-height: 1.5;
+        background-image: linear-gradient(
+          rgba(0, 0, 0, 0.2) 50%,
+          transparent 0
+        );
+        background-size: auto 3em;
+        background-origin: content-box;
+        tab-size: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="./index.html">Home</a>
+    </div>
+    <pre>
+      while (true) {
+        const d = new Date();
+        if (d.getDate() === 1 && d.getMonth() === 3) {
+          alert("TROLOLOL");
+        }
+      }
+    </pre>
+  </body>
+</html>

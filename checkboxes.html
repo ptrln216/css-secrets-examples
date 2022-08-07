@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkboxes</title>
+    <style>
+      :root {
+        --size: 400px;
+      }
+      html,
+      body {
+        font-size: 62.5%;
+        background: #eee;
+      }
+      body {
+        font-size: 1rem;
+      }
+      input,
+      label {
+        font-size: 1.6em;
+      }
+      input[type="checkbox"] {
+        position: absolute;
+        clip: rect(0, 0, 0, 0);
+      }
+      input[type="checkbox"] + label::before {
+        cursor: pointer;
+        content: "\a0";
+        display: inline-block;
+        vertical-align: 0.15em;
+        width: 0.8em;
+        height: 0.8em;
+        background: silver;
+        border-radius: 0.2em;
+        margin-right: 0.2em;
+        line-height: 0.5;
+        text-indent: 0.15em;
+      }
+      input[type="checkbox"]:checked + label::before {
+        content: "\2713";
+        background: yellowgreen;
+      }
+      input[type="checkbox"]:focus + label::before {
+        box-shadow: 0 0 0.1em 0.1em #58a;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="./index.html">Home</a>
+    </div>
+    <input type="checkbox" name="" id="one" />
+    <label for="one">One</label>
+  </body>
+</html>

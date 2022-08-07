@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiple Borders</title>
+    <style>
+      html,
+      body {
+        font-size: 62.5%;
+        background: #eee;
+      }
+      .box {
+        height: 100px;
+        width: 100px;
+        background: yellowgreen;
+        box-shadow: 0 0 0 10px #655, 0 0 0 20px deeppink,
+          0 2px 5px 25px rgba(0, 0, 0, 0.6);
+        margin: 25px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box1 {
+        height: 100px;
+        width: 100px;
+        background: yellowgreen;
+        border: 10px solid #655;
+        outline: 1px solid deeppink;
+        outline-style: dashed;
+        outline-offset: -5px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .playground {
+        width: 800px;
+        height: 400px;
+        border-radius: 350px;
+        border: 100px solid #655;
+        background: yellowgreen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: 1px solid deeppink;
+        outline-offset: -50px;
+        outline-style: dashed;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="./index.html">Home</a>
+    </div>
+    <div class="box">box shadow</div>
+    <div class="box1">outline</div>
+    <div class="playground">playground</div>
+  </body>
+</html>
